@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Jogo</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='jogo.css'>
+  <script src='questions.js'></script>
+  <script src='script.js'></script>
+
+</head>
+<body>
+  <section>
+    <canvas width="800" height="650"></canvas>
+    <article>
+        <h1 id="titulo1" style="text-align: center; font-size: 30px;"><bold>Judiciário</bold></h1>
+        <p id="texto1" style="text-align: justify;">Para proteger seu produto de possível pirataria ao entrar no mercado europeu, a Krill deve realizar o registro da patente da sua marca. Levando em conta questões como tempo e gastos financeiros, qual a melhor forma da empresa fazer esse registro?</p>
+        <br>
+          <a class="botao" id='a' onclick="checkTurn(this.id)" style="font-size: 15px;">A</a></div><p id='q1'>Patentear usando o PCT (Tratado de Cooperação de Patentes)</p><hr>
+          <a class="botao" id='b' onclick="checkTurn(this.id)" style="font-size: 15px;">B</a></div><p id='q2'>Confiar no registro feito no Brasil, não realizando a proteção da marca no exterior</p><hr>
+          <a class="botao" id='c' onclick="checkTurn(this.id)" style="font-size: 15px;">C</a></div><p id='q3'>Registrar a marca já estando no território europeu.</p><hr>
+    </article>
+  </section>
+  <footer><p>Direitos autorais reservados ao Grupo Krill</p></footer>
+</body>
+</html>
