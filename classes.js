@@ -27,18 +27,14 @@ class Peao {
     this.posX = x;
     this.posY = y;
     this.img = img;
-    this.currentHouse = null;
+    this.currentHouse = casas[0];
     this.cor = cor;
     this.offset = offset;
 
     this.move = function () {
-      var getHouse =
-        this.currentHouse == null
-          ? casas[0]
-          : casas[casas.indexOf(this.currentHouse) + 1];
-      this.currentHouse = getHouse;
-      this.posX = getHouse.x + offset;
-      this.posY = getHouse.y;
+      this.currentHouse = casas[casas.indexOf(this.currentHouse) + 1];
+      this.posX = this.currentHouse.x + offset;
+      this.posY = this.currentHouse.y;
     };
 
     this.draw = function (ctx) {
@@ -77,9 +73,7 @@ function alertSayname() {
 
 function setPergunta(player) {
   var house = player.currentHouse;
-  var perguntas =
-    house != null ? getPergunta(house) : getPergunta(casas[0].tipo);
-
+  var perguntas = getPergunta(house.tipo);
   var pergunta = shuffle(perguntas)[0];
 
   document.getElementById("titulo1").innerHTML = pergunta.titulo1;

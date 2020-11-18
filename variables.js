@@ -1,3 +1,8 @@
+var casa0 = {
+  x: 430,
+  y: 550,
+  tipo: null,
+};
 var casa1 = {
   x: 470,
   y: 560,
@@ -125,6 +130,7 @@ var casa25 = {
 };
 
 casas = [
+  casa0,
   casa1,
   casa2,
   casa3,

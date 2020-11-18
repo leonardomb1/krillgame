@@ -42,13 +42,12 @@ function checkPlayerColor(player) {
 }
 
 function checkTurn(id) {
-  checkPlayerColor(currPlayer);
-
   if (currPergunta.correta.toUpperCase() == id.toUpperCase()) {
     currPlayer.move();
   }
-  alert("O jogador a começar a jogar é o " + alertSayname());
 
   currPlayer = rodada.next();
+  alert("O jogador a começar a jogar é o " + alertSayname());
+  checkPlayerColor(currPlayer);
   setPergunta(currPlayer);
 }

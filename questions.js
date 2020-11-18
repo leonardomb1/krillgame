@@ -10,6 +10,8 @@ class pergunta {
   }
 }
 var questionList = [
+  new pergunta("Pergunta não encontrada", "", "", "", "", "", ""),
+
   new pergunta(
     "Exportação",
     "Por qual meio de transporte possui maior capacidade de armazenar cargas na rota Brasil - Espanha?",
@@ -481,10 +483,17 @@ shuffle(questionList);
 
 function getPergunta(tipo) {
   var filterList = [];
+  if (tipo == null) {
+    return questionList;
+  }
+
   for (pergunta of questionList) {
     if (pergunta.tipo == tipo) {
       filterList.push(pergunta);
     }
+  }
+  if (filterList.length == 0) {
+    filterList.push(questionList[0]);
   }
   return filterList;
 }
