@@ -14,7 +14,7 @@ class Rodada {
   }
 
   init() {
-    return this.items[0];
+    return shuffle(this.items)[0];
   }
 }
 
